@@ -1,0 +1,22 @@
+{
+  "name": "SC Vod Archive: Now Playing",
+  "version": "0.1",
+  "manifest_version": 2,
+  "description": "Shows the currently playing match on twitch/scvodarchive",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*", "http://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "permissions": ["contextMenus", "tabs", "http://*/*", "https://*/*"],
+  "icons": {
+    "16": "images/get_started16.png",
+    "128": "images/get_started128.png"
+  }
+}
